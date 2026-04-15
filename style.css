@@ -47,6 +47,8 @@ header {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 header::before {
@@ -56,7 +58,7 @@ header::before {
     background: url('assets/images/background.webp') no-repeat center/cover;
     filter: blur(4px);
     transform: scale(1.1);
-    z-index: -1;
+    z-index: -2;
 }
 
 header::after {
@@ -64,6 +66,14 @@ header::after {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+/* Paksa teks di paling depan */
+header h1,
+header p {
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
