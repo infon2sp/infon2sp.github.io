@@ -1,9 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Info Komunitas Fotografi Bandung</title>
+    <title>Media Info N2SP | Komunitas Fotografi Bandung</title>
+
     <style>
         body {
             margin: 0;
@@ -12,10 +13,31 @@
             color: #fff;
         }
 
+        /* NAVBAR */
+        nav {
+            background: #000;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #fff;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* HEADER */
         header {
             background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') no-repeat center/cover;
             height: 60vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
@@ -24,8 +46,13 @@
         header h1 {
             font-size: 3em;
             background: rgba(0,0,0,0.6);
-            padding: 20px;
+            padding: 15px 25px;
             border-radius: 10px;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #ddd;
         }
 
         section {
@@ -36,6 +63,8 @@
 
         h2 {
             color: #f39c12;
+            border-bottom: 2px solid #f39c12;
+            display: inline-block;
         }
 
         .card {
@@ -45,58 +74,83 @@
             border-radius: 10px;
         }
 
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #f39c12;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
             background: #000;
             font-size: 0.9em;
-        }
-
-        a {
-            color: #f39c12;
-            text-decoration: none;
+            color: #aaa;
         }
     </style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kegiatan">Kegiatan</a>
+    <a href="berita/index.html">Berita</a>
+    <a href="#kontak">Kontak</a>
+</nav>
+
+<!-- HEADER -->
 <header>
-    <h1>Komunitas Fotografi Bandung</h1>
+    <h1>Media Info N2SP</h1>
+    <p>Komunitas Fotografi Bandung</p>
 </header>
 
-<section>
+<section id="tentang">
     <h2>Tentang Kami</h2>
     <div class="card">
         <p>
-            Media Info N2SP adalah komunitas fotografi di Bandung yang menjadi wadah bagi para pecinta fotografi 
-            untuk belajar, berbagi, dan berkembang bersama. Kami terbuka untuk pemula hingga profesional.
+            Media Info N2SP adalah media informasi kegiatan komunitas fotografi di Bandung.
+            Wadah untuk belajar, berbagi, dan berkembang bersama bagi fotografer pemula hingga profesional.
         </p>
     </div>
+</section>
 
+<section id="kegiatan">
     <h2>Kegiatan</h2>
     <div class="card">
         <ul>
             <li>Photo hunting di berbagai lokasi Bandung</li>
             <li>Workshop & sharing teknik fotografi</li>
             <li>Diskusi dan review karya</li>
-            <li>Kolaborasi dengan komunitas lain</li>
+            <li>Kolaborasi komunitas</li>
         </ul>
     </div>
+</section>
 
-    <h2>Galeri</h2>
+<section>
+    <h2>Berita Terbaru</h2>
     <div class="card">
-        <p>Segera hadir galeri foto dari anggota komunitas 📸</p>
+        <p>Update kegiatan terbaru komunitas fotografi N2SP.</p>
+        <a href="berita/index.html" class="btn">Lihat Semua Berita</a>
     </div>
+</section>
 
+<section id="kontak">
     <h2>Kontak</h2>
     <div class="card">
         <p>Email: n2sp.fotografi@email.com</p>
-        <p>Instagram: <a href="#">@n2sp_bandung</a></p>
+        <p>Instagram: @n2sp_bandung</p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 N2SP Komunitas Fotografi Bandung</p>
+    <p>© 2026 Media Info N2SP | Komunitas Fotografi Bandung</p>
 </footer>
 
 </body>
