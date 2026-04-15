@@ -64,7 +64,8 @@ header h1 {
 
 header p {
     margin-top: 10px;
-    color: #ddd;
+    color: #f5f5f5;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 section {
