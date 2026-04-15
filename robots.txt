@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+https://infon2sp.github.io//sitemap.xml
