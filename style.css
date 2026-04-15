@@ -26,13 +26,31 @@ nav a:hover {
 
 /* HEADER */
 header {
-    background: url('assets/images/background.webp') no-repeat center/cover;
+    position: relative;
     height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('assets/images/background.webp') no-repeat center/cover;
+    filter: blur(5px);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
 }
 
 header h1 {
