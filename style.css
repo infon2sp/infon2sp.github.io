@@ -55,9 +55,11 @@ header::after {
 
 header h1 {
     font-size: 3em;
-    background: rgba(0,0,0,0.6);
+    color: #fff;
+    background: rgba(0,0,0,0.5);
     padding: 15px 25px;
     border-radius: 10px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 
 header p {
