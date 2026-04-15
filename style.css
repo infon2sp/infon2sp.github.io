@@ -1,9 +1,9 @@
 :root {
     --primary: #f39c12;
-    --bg-dark: #111;
-    --bg-black: #000;
-    --card: #1c1c1c;
-    --text: #fff;
+    --bg-dark: #1a1a1a; /* lebih terang */
+    --bg-black: #0d0d0d;
+    --card: #242424; /* ikut dinaikin biar seimbang */
+    --text: #f5f5f5; /* sedikit lebih soft dari putih */
 }
 
 /* GLOBAL */
