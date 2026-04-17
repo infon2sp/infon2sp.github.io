@@ -1,32 +1,103 @@
-<!-- Homepage -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
     <url>
-        <loc>https://infon2sp.github.io</loc>
-        <lastmod>2026-04-15</lastmod>
+        <loc>https://infon2sp.github.io/</loc>
+        <lastmod>2026-04-17</lastmod>
         <priority>1.0</priority>
     </url>
 
     <!-- Halaman Info -->
     <url>
         <loc>https://infon2sp.github.io/berita/index.html</loc>
-        <lastmod>2026-04-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <priority>0.9</priority>
     </url>
 
     <!-- Kategori -->
     <url>
         <loc>https://infon2sp.github.io/berita/pengetahuan/index.html</loc>
+        <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://infon2sp.github.io/berita/tempat/index.html</loc>
+        <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://infon2sp.github.io/berita/alat/index.html</loc>
+        <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://infon2sp.github.io/berita/komunitas/index.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Pengetahuan -->
+    <url>
+        <loc>https://infon2sp.github.io/berita/pengetahuan/dasar-exposure.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://infon2sp.github.io/berita/pengetahuan/rule-of-thirds.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://infon2sp.github.io/berita/pengetahuan/panning.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Tempat -->
+    <url>
+        <loc>https://infon2sp.github.io/berita/tempat/braga.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://infon2sp.github.io/berita/tempat/tebing-keraton.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://infon2sp.github.io/berita/tempat/alun-alun.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Alat -->
+    <url>
+        <loc>https://infon2sp.github.io/berita/alat/kamera-pemula.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://infon2sp.github.io/berita/alat/jenis-lensa.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://infon2sp.github.io/berita/alat/tripod.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Komunitas -->
+    <url>
+        <loc>https://infon2sp.github.io/berita/komunitas/hunting-braga.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://infon2sp.github.io/berita/komunitas/workshop-lightroom.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://infon2sp.github.io/berita/komunitas/kolaborasi.html</loc>
+        <priority>0.7</priority>
     </url>
 
 </urlset>
