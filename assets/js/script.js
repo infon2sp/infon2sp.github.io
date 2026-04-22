@@ -1,13 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
     const slider = document.querySelector(".promo-slider");
 
     let current = 0;
 
     function showSlide(index) {
         slides.forEach(s => s.classList.remove("active"));
+        dots.forEach(d => d.classList.remove("active"));
+
         slides[index].classList.add("active");
+        if (dots[index]) {
+            dots[index].classList.add("active");
+        }
     }
 
     // AUTO SLIDE
@@ -36,14 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(current);
     });
 
+    // CLICK DOTS
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            current = i;
+            showSlide(current);
+        });
+    });
+
 });
-
-const dots = document.querySelectorAll(".dot");
-
-function showSlide(index) {
-    slides.forEach(s => s.classList.remove("active"));
-    dots.forEach(d => d.classList.remove("active"));
-
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
-}
