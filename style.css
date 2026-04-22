@@ -190,17 +190,20 @@ footer {
 }
 
 /* slide */
+/* slide */
 .slide {
     position: absolute;
     width: 100%;
-    height: 70%;
+    height: 100%; /* penting full */
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
 
-    display: flex;              /* untuk 2 logo */
+    display: flex;
+    flex-direction: column;           /* 🔥 kunci */
+    justify-content: space-between;   /* isi atas & bawah */
     align-items: center;
-    justify-content: center;
-    gap: 20px;                  /* jarak antar logo */
+
+    padding: 15px;
     background: linear-gradient(to top, #000, #1a1a1a);
 }
 
@@ -209,25 +212,11 @@ footer {
     opacity: 1;
     z-index: 1;
 }
-
 /* gambar (dibikin kecil & rapi) */
 .slide img {
     width: 60%;                     /* 2 logo dalam 1 baris */
     max-height: 200px;
     object-fit: contain;
-}
-
-/* caption (opsional, bisa disembunyiin kalau ganggu) */
-.caption {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    color: white;
-    background: rgba(0,0,0,0.5);
-    padding: 8px;
-    border-radius: 6px;
-    font-size: 14px;
 }
 
 /* DOTS */
@@ -250,4 +239,32 @@ footer {
 
 .dot.active {
     background: #fff;
+}
+
+/* judul atas */
+.title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* tengah (logo tetap) */
+.logo-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.logo-row img {
+    width: 45%;
+    max-height: 180px;
+    object-fit: contain;
+}
+
+/* tulisan bawah */
+.caption {
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
 }
