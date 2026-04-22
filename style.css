@@ -243,8 +243,8 @@ footer {
 
 /* judul atas */
 .title {
-    color: #fff;
-    font-size: 16px;
+   color: #FFD700; /* kuning gold (lebih enak dilihat) */
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
 }
@@ -265,6 +265,6 @@ footer {
 /* tulisan bawah */
 .caption {
     color: #ccc;
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
 }
