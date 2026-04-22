@@ -193,7 +193,7 @@ footer {
 .slide {
     position: absolute;
     width: 100%;
-    height: 80%;
+    height: 70%;
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
 
@@ -201,7 +201,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 20px;                  /* jarak antar logo */
-    background: #111;
+    background: linear-gradient(to top, #000, #1a1a1a);
 }
 
 /* aktif */
@@ -213,7 +213,7 @@ footer {
 /* gambar (dibikin kecil & rapi) */
 .slide img {
     width: 45%;                     /* 2 logo dalam 1 baris */
-    max-height: 200px;
+    max-height: 150px;
     object-fit: contain;
 }
 
