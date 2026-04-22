@@ -212,7 +212,7 @@ footer {
 
 /* gambar (dibikin kecil & rapi) */
 .slide img {
-    width: 45%;                     /* 2 logo dalam 1 baris */
+    width: 60%;                     /* 2 logo dalam 1 baris */
     max-height: 150px;
     object-fit: contain;
 }
