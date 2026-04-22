@@ -162,3 +162,45 @@ footer {
         padding: 30px 15px;
     }
 }
+
+
+/* PROMO */
+.promo-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slides {
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 15px;
+    border-radius: 8px;
+}
