@@ -37,3 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+    slides.forEach(s => s.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+}
