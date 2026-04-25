@@ -150,17 +150,104 @@ footer {
 }
 
 /* PROMO SLIDER */
+/* slide */
 .slide {
+    position: absolute;
+    width: 100%;
+    height: 70%; /* tetap */
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+
+    /* 🔥 lebih hidup + gradasi halus */
     background: linear-gradient(to top, #1a1f24, #2f3640);
 }
 
+/* aktif */
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* gambar */
+.slide img {
+    width: 60%;
+    max-height: 200px;
+    object-fit: contain;
+
+    /* ✨ kasih sedikit pop */
+    filter: brightness(1.1) contrast(1.05);
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05);
+}
+
+/* DOTS */
+.dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: #888; /* lebih soft */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background: #ffd54f; /* nyambung ke primary */
+    box-shadow: 0 0 8px rgba(255,213,79,0.8);
+}
+
+/* judul atas */
 .title {
     color: #ffd54f;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
+
+    /* ✨ glow ringan */
+    text-shadow: 0 0 10px rgba(255,213,79,0.5);
 }
 
+/* tengah (logo tetap) */
+.logo-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.logo-row img {
+    width: 45%;
+    max-height: 180px;
+    object-fit: contain;
+
+    /* sedikit lebih hidup */
+    filter: brightness(1.1);
+}
+
+/* tulisan bawah */
 .caption {
     color: #ddd;
-    font-size: 18px;
+    font-size: 20px;
+    text-align: center;
 }
