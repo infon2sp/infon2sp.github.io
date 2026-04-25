@@ -184,11 +184,34 @@ footer {
 }
 
 /* 🔥 ukuran aman (tidak melebar & tidak hilang) */
+/* DEFAULT = desktop */
 .logo-row img {
-    width: 45%;              /* BALIK ke konsep awal */
-    max-width: 200px;        /* pembatas biar ga kelewatan */
+    width: 30%;
+    max-width: 140px;
     height: auto;
     object-fit: contain;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .logo-row img {
+        width: 40%;
+        max-width: 120px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .logo-row {
+        flex-direction: column; /* 🔥 biar nggak sempit */
+        gap: 10px;
+    }
+
+    .logo-row img {
+        width: 60%;
+        max-width: 120px;
+    }
+}
 }
 
 /* fallback global */
