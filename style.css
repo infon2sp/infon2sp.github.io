@@ -1,27 +1,28 @@
 :root {
-    --primary: #f39c12;
-    --bg-dark: #1a1a1a; /* lebih terang */
-    --bg-black: #0d0d0d;
-    --card: #242424; /* ikut dinaikin biar seimbang */
-    --text: #f5f5f5; /* sedikit lebih soft dari putih */
+    --primary: #ffb400;           /* lebih terang & pop */
+    --primary-glow: #ffd54f;      /* aksen glow */
+    --bg-dark: #222831;           /* abu gelap modern */
+    --bg-black: #1a1f24;
+    --card: #2f3640;              /* lebih terang dari bg */
+    --text: #f1f2f6;
 }
 
 /* GLOBAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--bg-dark);
+    background: linear-gradient(135deg, #1f2428, #2c3338);
     color: var(--text);
 }
 
 /* NAVBAR */
 nav {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.6);
     padding: 15px 20px;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(3px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     z-index: 100;
 }
 
@@ -30,16 +31,26 @@ nav a {
     margin-right: 20px;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    position: relative;
 }
 
-nav a:hover {
-    color: var(--primary);
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--primary);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* HEADER */
 header {
-    position: relative;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -48,7 +59,6 @@ header {
     text-align: center;
     overflow: hidden;
     position: relative;
-    z-index: 1;
 }
 
 header::before {
@@ -56,8 +66,8 @@ header::before {
     position: absolute;
     inset: 0;
     background: url('assets/images/background.webp') no-repeat center/cover;
-    filter: blur(1.5px);
-   transform: scale(1.03);
+    filter: blur(2px) brightness(1.2); /* lebih terang */
+    transform: scale(1.05);
     z-index: -2;
 }
 
@@ -65,31 +75,23 @@ header::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.4);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
     z-index: -1;
-}
-
-/* Paksa teks di paling depan */
-header h1,
-header p {
-    position: relative;
-    z-index: 2;
 }
 
 header h1 {
     font-size: 3em;
     color: #fff;
-    background: rgba(0,0,0,0.5);
     padding: 15px 25px;
     border-radius: 10px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 20px rgba(255,180,0,0.5); /* glow */
 }
 
 header p {
     margin-top: 10px;
-    color: #fff;
-    opacity: 0.9;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    color: #eee;
+    opacity: 0.95;
 }
 
 /* SECTION */
@@ -103,7 +105,6 @@ section {
 h2 {
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
-    display: inline-block;
 }
 
 /* CARD */
@@ -111,30 +112,32 @@ h2 {
     background: var(--card);
     padding: 20px;
     margin: 15px 0;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255,180,0,0.15);
 }
 
 /* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 8px 15px;
-    background: var(--primary);
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #ffb400, #ffd54f);
     color: #000;
-    border-radius: 5px;
+    border-radius: 6px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background: #fff;
-    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,180,0,0.6);
 }
 
 /* FOOTER */
@@ -146,125 +149,18 @@ footer {
     color: #aaa;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-        padding: 10px 15px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 10px 10px 0 0;
-    }
-
-    section {
-        padding: 30px 15px;
-    }
-}
-
-
-/* PROMO */
-.promo-slider {
-    position: relative;
-    max-width: 700px;          /* ukuran sedang */
-    margin: 40px auto;         /* tengah */
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* container */
-.slides {
-    position: relative;
-    height: 350px;             /* tinggi fix biar gak loncat */
-}
-
-/* slide */
+/* PROMO SLIDER */
 .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+    background: linear-gradient(to top, #1a1f24, #2f3640);
 }
 
-/* slide */
-/* slide */
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 70%; /* penting full */
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-
-    display: flex;
-    flex-direction: column;           /* 🔥 kunci */
-    justify-content: space-between;   /* isi atas & bawah */
-    align-items: center;
-
-    padding: 15px;
-    background: linear-gradient(to top, #000, #1a1a1a);
-}
-
-/* aktif */
-.slide.active {
-    opacity: 1;
-    z-index: 1;
-}
-/* gambar (dibikin kecil & rapi) */
-.slide img {
-    width: 60%;                     /* 2 logo dalam 1 baris */
-    max-height: 200px;
-    object-fit: contain;
-}
-
-/* DOTS */
-.dots {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-.dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 5px;
-    background: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #fff;
-}
-
-/* judul atas */
 .title {
-   color: #FFD700; /* kuning gold (lebih enak dilihat) */
+    color: #ffd54f;
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
 }
 
-/* tengah (logo tetap) */
-.logo-row {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.logo-row img {
-    width: 45%;
-    max-height: 180px;
-    object-fit: contain;
-}
-
-/* tulisan bawah */
 .caption {
-    color: #ccc;
-    font-size: 20px;
-    text-align: center;
+    color: #ddd;
+    font-size: 18px;
 }
