@@ -151,10 +151,11 @@ footer {
 
 /* PROMO SLIDER */
 /* slide */
+/* slide (tetap seperti punyamu, hanya background diperbaiki) */
 .slide {
     position: absolute;
     width: 100%;
-    height: 70%; /* tetap */
+    height: 70%;
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
 
@@ -165,29 +166,32 @@ footer {
 
     padding: 15px;
 
-    /* 🔥 lebih hidup + gradasi halus */
     background: linear-gradient(to top, #1a1f24, #2f3640);
 }
 
-/* aktif */
-.slide.active {
-    opacity: 1;
-    z-index: 1;
+/* container logo biar ga stretch */
+.logo-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center; /* 🔥 penting */
+    width: 100%;
 }
 
-/* gambar */
-.slide img {
-    width: 60%;
-    max-height: 200px;
+/* 🔥 INI KUNCI FIX NYA */
+.logo-row img {
+    width: auto;              /* jangan pakai % */
+    max-width: 180px;         /* batasi biar ga melebar */
+    max-height: 160px;
     object-fit: contain;
-
-    /* ✨ kasih sedikit pop */
-    filter: brightness(1.1) contrast(1.05);
-    transition: transform 0.3s ease;
 }
 
-.slide img:hover {
-    transform: scale(1.05);
+/* kalau ada .slide img global, batasi juga */
+.slide img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* DOTS */
