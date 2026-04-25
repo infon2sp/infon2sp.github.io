@@ -150,8 +150,9 @@ footer {
 }
 
 /* PROMO SLIDER */
+/* PROMO SLIDER */
+
 /* slide */
-/* slide (tetap seperti punyamu, hanya background diperbaiki) */
 .slide {
     position: absolute;
     width: 100%;
@@ -165,33 +166,35 @@ footer {
     align-items: center;
 
     padding: 15px;
-
     background: linear-gradient(to top, #1a1f24, #2f3640);
 }
 
-/* container logo biar ga stretch */
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 🔥 container logo */
 .logo-row {
     display: flex;
     gap: 20px;
     justify-content: center;
-    align-items: center; /* 🔥 penting */
+    align-items: center;
     width: 100%;
 }
 
-/* 🔥 INI KUNCI FIX NYA */
+/* 🔥 ukuran aman (tidak melebar & tidak hilang) */
 .logo-row img {
-    width: auto;              /* jangan pakai % */
-    max-width: 180px;         /* batasi biar ga melebar */
-    max-height: 160px;
+    width: 45%;              /* BALIK ke konsep awal */
+    max-width: 200px;        /* pembatas biar ga kelewatan */
+    height: auto;
     object-fit: contain;
 }
 
-/* kalau ada .slide img global, batasi juga */
+/* fallback global */
 .slide img {
-    width: auto;
     max-width: 100%;
     height: auto;
-    object-fit: contain;
 }
 
 /* DOTS */
@@ -207,49 +210,27 @@ footer {
     width: 10px;
     height: 10px;
     margin: 5px;
-    background: #888; /* lebih soft */
+    background: #888;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.dot:hover {
-    transform: scale(1.2);
-}
-
 .dot.active {
-    background: #ffd54f; /* nyambung ke primary */
+    background: #ffd54f;
     box-shadow: 0 0 8px rgba(255,213,79,0.8);
 }
 
-/* judul atas */
+/* judul */
 .title {
     color: #ffd54f;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-
-    /* ✨ glow ringan */
     text-shadow: 0 0 10px rgba(255,213,79,0.5);
 }
 
-/* tengah (logo tetap) */
-.logo-row {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.logo-row img {
-    width: 45%;
-    max-height: 180px;
-    object-fit: contain;
-
-    /* sedikit lebih hidup */
-    filter: brightness(1.1);
-}
-
-/* tulisan bawah */
+/* caption */
 .caption {
     color: #ddd;
     font-size: 20px;
