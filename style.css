@@ -183,7 +183,7 @@ footer {
 
 /* DESKTOP */
 .logo-row img {
-    width: 30%;
+    width: 50%;
     max-width: 140px;
     height: auto;
     object-fit: contain;
