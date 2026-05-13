@@ -314,3 +314,28 @@ footer {
 .product-btn:hover{
     transform: scale(1.03);
 }
+
+/* ========================= */
+/* GRID FOTOGRAFER */
+/* ========================= */
+
+.photographer-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* TABLET */
+@media (max-width: 992px){
+    .photographer-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px){
+    .photographer-grid{
+        grid-template-columns: 1fr;
+    }
+}
