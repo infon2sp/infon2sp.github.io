@@ -438,7 +438,8 @@ footer {
 
     .proposal-slide img{
         height:45vh;
-        object-fit:cover;
+        object-fit:contain;
+        background:#111;
     }
 
     .proposal-caption{
