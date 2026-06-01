@@ -398,3 +398,28 @@ footer {
 .overlay p{
     font-size:20px;
 }
+
+.proposal-nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    margin-top:20px;
+}
+
+.prev-btn,
+.next-btn{
+    background:#111;
+    color:white;
+    border:none;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:24px;
+}
+
+.prev-btn:hover,
+.next-btn:hover{
+    background:#333;
+}
