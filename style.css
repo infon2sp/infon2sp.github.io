@@ -433,3 +433,36 @@ footer {
     font-size:18px;
     opacity:0.8;
 }
+/* MOBILE */
+@media (max-width:768px){
+
+    .proposal-slide img{
+        height:45vh;
+        object-fit:cover;
+    }
+
+    .proposal-caption{
+        padding:20px;
+    }
+
+    .proposal-caption h1{
+        font-size:24px;
+        line-height:1.3;
+    }
+
+    .proposal-caption p{
+        font-size:14px;
+    }
+
+    .proposal-nav{
+        gap:10px;
+    }
+
+    .prev-btn,
+    .next-btn{
+        width:38px;
+        height:38px;
+        font-size:20px;
+    }
+
+}
