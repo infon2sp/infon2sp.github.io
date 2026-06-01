@@ -437,11 +437,13 @@ footer {
 @media (max-width:768px){
 
     .proposal-slide img{
-        height:45vh;
-        object-fit:contain;
-        background:#111;
+        width:100%;
+        aspect-ratio:16/9;
+        object-fit:cover;
+        object-position:center;
     }
 
+}
     .proposal-caption{
         padding:20px;
     }
