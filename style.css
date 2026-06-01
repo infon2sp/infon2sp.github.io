@@ -339,3 +339,62 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* PROPOSAL */
+.visual-proposal{
+    padding:40px 20px;
+}
+
+.proposal-header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.proposal-slider{
+    position:relative;
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:18px;
+}
+
+.proposal-slide{
+    display:none;
+    position:relative;
+}
+
+.proposal-slide.active{
+    display:block;
+}
+
+.proposal-slide img{
+    width:100%;
+    height:70vh;
+    object-fit:cover;
+    display:block;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.overlay h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.overlay p{
+    font-size:20px;
+}
