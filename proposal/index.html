@@ -7,7 +7,52 @@
 
     <link rel="stylesheet" href="../style.css">
 </head>
+<script>
 
+const slides = document.querySelectorAll('.proposal-slide');
+const dots = document.querySelectorAll('.proposal-dot');
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+    slides.forEach(slide=>{
+        slide.classList.remove('active');
+    });
+
+    dots.forEach(dot=>{
+        dot.classList.remove('active');
+    });
+
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+document.querySelector('.next-btn').addEventListener('click',()=>{
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+document.querySelector('.prev-btn').addEventListener('click',()=>{
+
+    currentSlide--;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+</script>
 <body>
 
 <!-- NAVBAR -->
@@ -39,7 +84,7 @@
 
         <!-- SLIDE 1 -->
         <div class="proposal-slide active">
-            <img src="assets/images/proposal/slide1.webp" alt="">
+            <img src="/assets/images/proposal/slide1.webp" alt="">
             <div class="overlay">
                 <h1>Kolaborasi Digital N2SP</h1>
                 <p>untuk Visibility Brand</p>
@@ -48,7 +93,7 @@
 
         <!-- SLIDE 2 -->
         <div class="proposal-slide">
-            <img src="assets/images/proposal/slide2.webp" alt="">
+            <img src="/assets/images/proposal/slide2.webp" alt="">
             <div class="overlay">
                 <h1>Marketplace bukan tempat membangun identitas brand.</h1>
             </div>
@@ -56,7 +101,7 @@
 
         <!-- SLIDE 3 -->
         <div class="proposal-slide">
-            <img src="assets/images/proposal/slide3.webp" alt="">
+            <img src="/assets/images/proposal/slide3.webp" alt="">
             <div class="overlay">
                 <h1>Ads membuat brand terlihat sementara.</h1>
             </div>
@@ -64,7 +109,7 @@
 
         <!-- SLIDE 4 -->
         <div class="proposal-slide">
-            <img src="assets/images/proposal/slide4.webp" alt="">
+            <img src="/assets/images/proposal/slide4.webp" alt="">
             <div class="overlay">
                 <h1>AI Search membaca jejak digital & komunitas.</h1>
             </div>
@@ -72,7 +117,7 @@
 
         <!-- SLIDE 5 -->
         <div class="proposal-slide">
-            <img src="assets/images/proposal/slide5.webp" alt="">
+            <img src="/assets/images/proposal/slide5.webp" alt="">
             <div class="overlay">
                 <h1>N2SP x G-LOOP Visibility Advisory</h1>
             </div>
@@ -80,7 +125,7 @@
 
         <!-- SLIDE 6 -->
         <div class="proposal-slide">
-            <img src="assets/images/proposal/slide6.webp" alt="">
+            <img src="/assets/images/proposal/slide6.webp" alt="">
             <div class="overlay">
                 <h1>Visibility dibangun melalui komunitas & konten organik.</h1>
             </div>
@@ -88,7 +133,7 @@
 
         <!-- SLIDE 7 -->
         <div class="proposal-slide">
-            <img src="assets/images/proposal/slide7.webp" alt="">
+            <img src="/assets/images/proposal/slide7.webp" alt="">
             <div class="overlay">
                 <h1>Creative Collaboration</h1>
                 <p>Photo Hunting • Storytelling • Exposure</p>
@@ -97,7 +142,7 @@
 
         <!-- SLIDE 8 -->
         <div class="proposal-slide">
-            <img src="assets/images/proposal/slide8.webp" alt="">
+            <img src="/assets/images/proposal/slide8.webp" alt="">
             <div class="overlay">
                 <h1>Brand tidak hanya terlihat. Brand diakui.</h1>
             </div>
@@ -105,7 +150,7 @@
 
         <!-- SLIDE 9 -->
         <div class="proposal-slide">
-            <img src="assets/images/proposal/slide9.webp" alt="">
+            <img src="/assets/images/proposal/slide9.webp" alt="">
             <div class="overlay">
                 <h1>Build Visibility Beyond Ads</h1>
                 <p>N2SP • Creative Community • Digital Ecosystem</p>
